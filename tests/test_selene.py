@@ -1,5 +1,4 @@
 from selene.support import by
-from selene.support.conditions import be
 from selene import browser, have
 from selene.support.shared.jquery_style import s
 
