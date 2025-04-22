@@ -1,8 +1,14 @@
 import allure
+from allure_commons.types import Severity
 from selene import browser, by, have
 from selene.support.shared.jquery_style import s
 
-
+@allure.tag('Web')
+@allure.severity(Severity.BLOCKER)
+@allure.label('owner')
+@allure.feature('Задачи в репозитории')
+@allure.story(f'Неавторизованный пользователь проверяет наличие задачи в репозитории')
+@allure.link('https://github.com')
 def test_decorator_steps(setup_browser):
     open_main_page()
     search_for_repository("aliranoki/qa_guru_python_19_hw5")

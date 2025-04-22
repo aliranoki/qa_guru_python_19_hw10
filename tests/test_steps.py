@@ -1,10 +1,16 @@
 import allure
+from allure_commons.types import Severity
 from selene import have
 from selene.support import by
 from selene.support.shared import browser
 from selene.support.shared.jquery_style import s
 
-
+@allure.tag('Web')
+@allure.severity(Severity.CRITICAL)
+@allure.label('owner')
+@allure.feature('Задачи в репозитории')
+@allure.story(f'Неавторизованный пользователь проверяет наличие задачи в репозитории')
+@allure.link('https://github.com')
 def test_dynamic_steps(setup_browser):
     with allure.step("Открываем главную страницу"):
         browser.open("https://github.com")

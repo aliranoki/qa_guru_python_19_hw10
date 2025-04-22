@@ -1,8 +1,15 @@
+import allure
+from allure_commons.types import Severity
 from selene.support import by
 from selene import browser, have
 from selene.support.shared.jquery_style import s
 
-
+@allure.tag('Web')
+@allure.severity(Severity.NORMAL)
+@allure.label('owner')
+@allure.feature('Задачи в репозитории')
+@allure.story(f'Неавторизованный пользователь проверяет наличие задачи в репозитории')
+@allure.link('https://github.com')
 def test_github(setup_browser):
     browser.open('https://github.com')
 
